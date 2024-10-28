@@ -9,10 +9,12 @@ import dotenv from "dotenv";
 import fileUpload from "express-fileupload";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import swaggerUI from "swagger-ui-express"
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use('/api-docs',swaggerUI.serve,swaggerUI.setup())
 app.use(cookieParser());
 const ACCEPTED_ORIGINS = [
   "http://localhost:8080",
@@ -51,6 +53,7 @@ app.use(
 );
 
 app.use("/api/auth", authRouter);
+
 app.use("/api/content", contentRouter);
 app.use("/api/category", categoryRouter);
 app.use("/api/theme", themeRouter);

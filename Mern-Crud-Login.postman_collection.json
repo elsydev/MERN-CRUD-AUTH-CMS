@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "59948bb0-2fc4-4ff2-ac18-e68664635906",
+		"name": "Mern-Crud-Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36825250"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"test910@gmail.com\",\n\"password\":\"password123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmar cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"179091\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/confirm-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"confirm-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "olvido password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Register Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "categoryName",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/add-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"add-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "categoryName",
+									"value": "imagenes",
+									"type": "text"
+								},
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								},
+								{
+									"key": "imagen",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "documento",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/update/671e56aca203c1754b67df4a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"update",
+								"671e56aca203c1754b67df4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/671cc92bdc1fced46dd8abee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"671cc92bdc1fced46dd8abee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/delete/671cc92bdc1fced46dd8abee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"delete",
+								"671cc92bdc1fced46dd8abee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Themes",
+			"item": [
+				{
+					"name": "Register Theme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "themeName",
+									"value": "Programacion",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "documento",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/theme/add-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"theme",
+								"add-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Theme",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "themeName",
+									"value": "Prorgramacion para adolescentes",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "documento",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/theme/update/671e8067294fc254bf0e1993",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"theme",
+								"update",
+								"671e8067294fc254bf0e1993"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get themes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/theme/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"theme",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get theme by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/theme/671cc92bdc1fced46dd8abee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"theme",
+								"671cc92bdc1fced46dd8abee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Theme by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test100",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test100@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "r_nCaGXiS/Captura 2016-04-20-08-04-54-606.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/theme/delete/671cc92bdc1fced46dd8abee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"theme",
+								"delete",
+								"671cc92bdc1fced46dd8abee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
